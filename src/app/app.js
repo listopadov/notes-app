@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
+import CSSModules from 'react-css-modules';
 import logo from '../assets/img/logo.svg';
-import './app.scss';
+import styles from './app.scss';
 
 class App extends Component {
   render() {
     return (
-      <div className="app">
-        <header className="app-header">
-          <img src={logo} className="app-logo" alt="logo" />
-          <h1 className="app-title">Welcome to React!!!</h1>
+      <div styleName="app">
+        <header styleName="app-header">
+          <img src={logo} styleName="app-logo" alt="logo" />
+          <h1 styleName="app-title">Welcome to React!!!</h1>
         </header>
-        <p className="app-intro">
+        <p styleName="app-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        </p >
       </div>
     );
   }
 }
 
-export default App;
+export default CSSModules(App, styles);
